@@ -41,15 +41,8 @@
                 <label for="num2">Segundo número:</label>
                 <input type="text" id="num2">
             </div>
-            <input type="button" value="Calcular suma" style="background-color: green;"  onclick="calcularSuma()">
-            <input type="button" value="Calcular resta" style="background-color: red;"  onclick="calcularResta()">
-            <input type="button" value="Calcular multiplicación" style="background-color: blue;"  onclick="calcularMultiplicacion()">
-            <input type="button" value="Calcular división" style="background-color: purple;"  onclick="calcularDivision()">
-        </form>
-
-        <div id="resultado"></div>
-    </div>
-</div>
+            <input type="button" value="Calcular suma"  onclick="calcularSuma()">
+            <input type="button" value="Calcular resta" onclick="calcularResta()">
         </form>
 
         <div id="resultado"></div>
@@ -93,41 +86,7 @@ function calcularResta() {
     }
 }
 
-function calcularMultiplicacion() {
-    // Obtener los valores de los campos de entrada
-    var num1 = parseFloat(document.getElementById("num1").value);
-    var num2 = parseFloat(document.getElementById("num2").value);
 
-    // Verificar si ambos valores son números
-    if (!isNaN(num1) && !isNaN(num2)) {
-        // Calcular la multiplicacion
-        var multiplicacion = num1 * num2;
-
-        // Mostrar el resultado en el elemento con id "resultado"
-        document.getElementById("resultado").innerHTML = "El resultado de la multiplicación es: " + multiplicacion;
-    } else {
-        // Mostrar un mensaje de error si los valores no son números
-        document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
-    }
-}
-
-function calcularDivision() {
-    // Obtener los valores de los campos de entrada
-    var num1 = parseFloat(document.getElementById("num1").value);
-    var num2 = parseFloat(document.getElementById("num2").value);
-
-    // Verificar si ambos valores son números
-    if (!isNaN(num1) && !isNaN(num2)) {
-        // Calcular la division
-        var division = num1 / num2;
-
-        // Mostrar el resultado en el elemento con id "resultado"
-        document.getElementById("resultado").innerHTML = "El resultado de la división es: " + division;
-    } else {
-        // Mostrar un mensaje de error si los valores no son números
-        document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
-    }
-}
 </script>
 
 </body>
